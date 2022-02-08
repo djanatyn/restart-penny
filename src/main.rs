@@ -22,14 +22,14 @@ impl EventHandler for Handler {
                 .status()
             {
                 println!("failed to restart penny: {:?}", why);
-            }
-
-            if let Err(why) = msg
-                .channel_id
-                .say(&ctx.http, "okay, i restarted penny!")
-                .await
-            {
-                println!("Error sending message: {:?}", why);
+            } else {
+                if let Err(why) = msg
+                    .channel_id
+                    .say(&ctx.http, "okay, i restarted penny!")
+                    .await
+                {
+                    println!("Error sending message: {:?}", why);
+                }
             }
         }
     }
