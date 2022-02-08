@@ -47,7 +47,7 @@ Feb 08 13:35:30 vessel redbot[601868]: [2022-02-08 13:35:30] [INFO] red.Audio.ma
 ...
 ```
 
-Typing `!pennyplz` in Discord-Chat will execute `systemctl restart penny-redbot`.
+Typing `!pennyplz` in Discord chat will execute `systemctl restart penny-redbot`.
 
 No other functionality is supported.
 
