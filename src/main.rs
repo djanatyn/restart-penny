@@ -14,7 +14,11 @@ impl EventHandler for Handler {
     async fn message(&self, ctx: Context, msg: Message) {
         if msg.content == "!pennyplz" {
             if let Err(why) = Command::new("sudo")
-                .args(["/run/current-system/sw/bin/systemctl", "restart", "penny-redbot"])
+                .args([
+                    "/run/current-system/sw/bin/systemctl",
+                    "restart",
+                    "penny-redbot",
+                ])
                 .status()
             {
                 println!("failed to restart penny: {:?}", why);
